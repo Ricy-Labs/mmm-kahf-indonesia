@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# data besar & hasil model
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.pkl
+*.parquet
+*.nc
+
+# Colab / notebook
+.ipynb_checkpoints/
+.env
