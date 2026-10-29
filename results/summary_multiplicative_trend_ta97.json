@@ -1,0 +1,31 @@
+{
+  "tag": "multiplicative_trend_ta97",
+  "seconds": 308.384343624115,
+  "diagnostics": {
+    "divergences": 0,
+    "max_r_hat": 1.0050562416716546,
+    "min_ess_bulk": 515.3419443868977,
+    "r2_in_sample": 0.9449489993486984,
+    "mape_in_sample_pct": 2.101855994494383
+  },
+  "criteria": {
+    "with_season": {
+      "1_diagnostik_sehat": true,
+      "2_share_dalam_hdi_>=4_dari_5": false,
+      "3_total_share_+-5pt": false,
+      "4_urutan_roi_ekstrem": true,
+      "total_share_est": 0.31851840022793365,
+      "total_share_true": 0.41939617202715707,
+      "n_channel_dalam_hdi": 3
+    },
+    "no_season": {
+      "1_diagnostik_sehat": true,
+      "2_share_dalam_hdi_>=4_dari_5": false,
+      "3_total_share_+-5pt": false,
+      "4_urutan_roi_ekstrem": true,
+      "total_share_est": 0.31851840022793365,
+      "total_share_true": 0.39513817529539713,
+      "n_channel_dalam_hdi": 3
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "tag": "multiplicative_notrend_ta97",
+  "seconds": 283.82658648490906,
+  "diagnostics": {
+    "divergences": 0,
+    "max_r_hat": 1.0028987756660983,
+    "min_ess_bulk": 363.28342854323887,
+    "r2_in_sample": 0.9441363443043198,
+    "mape_in_sample_pct": 2.109433075775333
+  },
+  "criteria": {
+    "with_season": {
+      "1_diagnostik_sehat": false,
+      "2_share_dalam_hdi_>=4_dari_5": false,
+      "3_total_share_+-5pt": false,
+      "4_urutan_roi_ekstrem": true,
+      "total_share_est": 0.31834192550603535,
+      "total_share_true": 0.41939617202715707,
+      "n_channel_dalam_hdi": 3
+    },
+    "no_season": {
+      "1_diagnostik_sehat": false,
+      "2_share_dalam_hdi_>=4_dari_5": false,
+      "3_total_share_+-5pt": false,
+      "4_urutan_roi_ekstrem": true,
+      "total_share_est": 0.31834192550603535,
+      "total_share_true": 0.39513817529539713,
+      "n_channel_dalam_hdi": 3
+    }
+  }
+}

@@ -1,0 +1,6 @@
+channel,est_share,share_hdi_low,share_hdi_high,est_roi,roi_hdi_low,roi_hdi_high,true_share_with_season,true_share_no_season,true_roi_with_season,true_roi_no_season
+influencer_S,0.0823,0.029,0.1502,1.4786,0.521,2.6976,0.1236,0.1165,2.2205,2.0923
+instagram_ads_S,0.0237,0.0,0.0547,0.713,0.0014,1.648,0.0825,0.0778,2.4843,2.3428
+marketplace_ads_S,0.1443,0.0813,0.2037,3.6034,2.0302,5.088,0.1023,0.0963,2.5552,2.4059
+tiktok_ads_S,0.0607,0.0015,0.1792,3.0245,0.0771,8.9314,0.0916,0.0864,4.5628,4.306
+offline_activation_S,0.0074,0.0026,0.0116,1.9501,0.6942,3.0773,0.0194,0.0182,5.1373,4.7955

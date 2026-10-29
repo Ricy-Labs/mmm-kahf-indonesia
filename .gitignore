@@ -224,6 +224,13 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+# file kecil yang memang harus ikut di-commit
+!data/processed/model_results.csv
+!data/processed/true_contributions.csv
+!data/processed/true_contributions_additive.csv
+!data/raw/mmm_kahf_simulated.csv
+!data/raw/mmm_kahf_simulated_additive.csv
+!data/raw/calendar_flags.csv
 *.pkl
 *.parquet
 *.nc
@@ -231,3 +238,4 @@ data/processed/*
 # Colab / notebook
 .ipynb_checkpoints/
 .env
+results/*.nc
