@@ -1,8 +1,6 @@
 # mmm-kahf-indonesia
 Marketing Mix Modeling untuk brand skincare pria (Kahf) di konteks Indonesia. Data simulasi, model Bayesian, dashboard Streamlit.
 
-
-
 ## Sumber Data & Asumsi
 
 ### Data simulasi
@@ -11,6 +9,7 @@ harian), bukan data marketing riil, karena data spend perusahaan bersifat
 rahasia. Karena itu, hasil model **tidak boleh dibaca sebagai temuan tentang
 bisnis nyata**. Fungsinya untuk menunjukkan alur kerja MMM dan menguji apakah
 model mampu menemukan kembali parameter yang sengaja ditanam di data.
+Data ini sepenuhnya simulasi dan tidak berasal dari, atau berafiliasi dengan, brand mana pun.
 
 ### Flag kalender
 Variabel kontrol kalender dibuat dari referensi publik:
@@ -20,9 +19,10 @@ Variabel kontrol kalender dibuat dari referensi publik:
 | `ramadan_flag` | 1 - 30 Maret 2025 | Penetapan awal Ramadan oleh Kemenag dan SKB libur nasional (Idul Fitri 31 Maret 2025) |
 | `harbolnas_flag` | 10 - 16 Desember 2025 (puncak 12.12) | Jadwal resmi Harbolnas 2025 dari idEA dan Kemenkomdigi |
 | `payday_flag` | Tanggal 25 sampai tanggal 1 bulan berikutnya | Keputusan tim: konsumsi cenderung naik di sekitar gajian dan awal bulan |
+| `weekend_flag` | Sabtu dan Minggu | Belanja online cenderung naik di akhir pekan |
 
 ### Asumsi efek (parameter simulasi)
-Besaran efek Ramadan, Harbolnas, dan payday, serta kecepatan adstock dan
+Besaran efek Ramadan, Harbolnas, payday, dan akhir pekan, serta kecepatan adstock dan
 saturasi tiap channel, adalah **asumsi tim**, bukan hasil riset atau
 pengukuran. Nilainya didokumentasikan di `docs/asumsi.md` beserta alasannya,
 dan dapat diubah di `src/config.py`.
@@ -38,5 +38,9 @@ dan dapat diubah di `src/config.py`.
   efek musiman sulit dipisahkan dari tren atau efek channel yang kebetulan
   naik pada waktu yang sama.
 - **Kualitas hasil bergantung pada variabel kontrol.** Faktor yang tidak
-  dimasukkan ke model (misalnya [promo/diskon, kondisi ekonomi]) dapat
+  dimasukkan ke model (misalnya promo dan diskon, atau kondisi ekonomi) dapat
   menggeser kontribusi channel secara keliru.
+- **Struktur simulasi dan model tidak identik.** Simulasi memakai saturasi Hill
+  dan efek musim multiplikatif, sedangkan model memakai saturasi logistik dan
+  efek aditif, sehingga parameter yang ditemukan model tidak akan persis sama
+  dengan yang ditanam.
