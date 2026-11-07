@@ -76,7 +76,7 @@ Hasil perhitungan dari simulasi (`data/processed/true_contributions.csv`).
 | `marketplace_ads_S` | 10,2% | 9,6% | 26,2% | 2,6 |
 | `tiktok_ads_S` | 9,2% | 8,6% | 13,1% | 4,6 |
 | `offline_activation_S` | 1,9% | 1,8% | 2,5% | 5,1 |
-| **Total media** | **41,9%** | **39,4%** | 100% | |
+| **Total media** | **41,9%** | **39,5%** | 100% | |
 
 *Kasar: kontribusi (share benar x total penjualan) dibagi total spend channel; bukan ROI inkremental murni.
 
@@ -85,6 +85,15 @@ Urutan penjualan per unit spend: offline > TikTok > marketplace > Instagram > in
 
 Dua versi jawaban benar disediakan karena model aditif tidak dapat menangkap pengali musim:
 bandingkan model aditif dengan kolom "tanpa pengali musim", dan model yang menangani interaksi musim dengan kolom "share benar".
+
+### Mode simulasi aditif (pembanding)
+
+Selain mode multiplikatif (struktur utama), `src/simulate_data.py` punya mode `additive`
+sebagai pembanding backtesting. Di mode ini efek kalender **ditambahkan** sebagai angka tetap
+(lift x rata-rata penjualan pra-musim), bukan mengalikan penjualan, sehingga media tidak ikut
+dikali musim. Spend, kompetitor, dan noise memakai seed yang sama dengan mode multiplikatif.
+Jawaban benarnya ada di `data/processed/true_contributions_additive.csv`, dan di mode ini versi
+"dengan" dan "tanpa pengali musim" sama.
 
 ## 7. Catatan untuk validasi
 
